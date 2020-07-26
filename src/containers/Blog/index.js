@@ -3,7 +3,7 @@ import * as firebase from "firebase";
 
 import config from './firebase-config';
 
-class App extends Component {
+class Blog extends Component {
   constructor() {
     super();
 
@@ -43,4 +43,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Blog;
