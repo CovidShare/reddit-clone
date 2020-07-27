@@ -17,6 +17,10 @@ class Posts extends Component {
     });
   }
 
+  handleDelete = (key) => {
+    this.props.firebase.ref('posts/' + key).remove();
+  }
+
   render() {
     let posts = this.props.posts;
     let _this = this;
@@ -54,6 +58,12 @@ class Posts extends Component {
                   >
                     Downvote
                   </button>
+                  <button
+                    onClick={_this.handleDelete.bind(this, key)}
+                    type="button"
+                    >
+                      Delete
+                    </button>
                 </div>
               </div>
             );
